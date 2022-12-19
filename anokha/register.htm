@@ -16,20 +16,70 @@
                 <br><br>
               <label  class = "cei" style="color: white;" for="email"><b>College Email ID:</b></label><br><br>
               <input type="text" placeholder="Enter Email" name="email" required><br><br>
-          
+              <label  class = "cei" style="color: white;" for="name"><b>Name:</b></label><br><br>
+              <input type="text" placeholder="Enter Name" id="text" onchange="nameValdie()" required><br><br>
+        
               <label class = "cei" style="color: white;"for="psw"><b>Password:</b></label><br><br>
-              <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+              <input type="password" placeholder="Enter Password" id="password" required><br><br>
           
               <label class = "cei" style="color: white;" for="psw-repeat"><b>Repeat Password:</b></label><br><br>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br><br>
+              <input type="password" placeholder="Repeat Password" id="confirm_password" required><br><br>
+              <h2 class="cei" style="color:white; font-size: 15px;">Gender:</h2><br>
+              <input  type="radio" id="html" name="fav_language" value="HTML">
+              <label  for="html">Male</label>
+              <input  type="radio" id="css" name="fav_language" value="CSS">
+              <label  for="css">Female</label>
+              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+              <label  for="javascript">Others</label>
+              <br><br>
               <div class="clearfix">
-                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="button" class="cancelbtn" ><a href=index.htm style="text-decoration:none" style="color: black;" >Go Back</a></button>
                 <button type="submit" class="signupbtn">Sign Up</button>
               </div>
+              
             </div>
             
           </form>
-        
+          <script>
+            //     input = document.getElementById("file")
+            //     {
+            
+            //   if (input.files && input.files[0].type === 'application/pdf') {
+            //     console.log(input.files[0].type)
+            //     return true;
+            //   } else {
+            //     alert("NOT a PDF")
+            //     return false;
+            //   }
+            // }
+            
+            function nameValdie(){
+              me = document.getElementById("text").value
+              const regex = /^[a-zA-Z\s]+$/ 
+              if (!!me.match(regex) == false) {
+                alert("Not a valid Name")
+                return false
+              }
+              return true
+            }
+            
+            var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+            
+          
+               
+            </script>
+            
     </body>
 <style>
 
@@ -46,12 +96,19 @@
       border: none;
       background: #f1f1f1;
     }
+    label{
+      color: white;
+    }
     
     input[type=text]:focus, input[type=password]:focus {
       background-color: #ddd;
       outline: none;
     }
-    
+    p{
+      color: white;
+    }
+
+
     hr {
       border: 1px solid #f1f1f1;
       margin-bottom: 25px;
@@ -63,7 +120,7 @@
       color: black;
       padding: 14px 20px;
       margin: 8px 0;
-      border: none;
+      border: black;
       cursor: pointer;
       width: 1%;
       opacity: 0.9;
@@ -81,25 +138,35 @@
       opacity:1;
     }
     
-    /* Extra styles for the cancel button */
     .cancelbtn {
-      padding: 14px 20px;
-      background-color: #f44336;
+      position: absolute;
+      right: 60%;
+      padding: 20px 5px;
+      background-color: white;
     }
-    
-    /* Float cancel and signup buttons and add an equal width */
-    .cancelbtn, .signupbtn {
+    .cancelbtn{
+      position: absolute;
+      right: 40%;
+      padding: 20px 5px;
       float: left;
-      width: 50%;
+      stroke: black;
+      width: 15%;
+      margin-left: -17%;
+    }
+    .signupbtn{
+      position: absolute;
+      right: 70%;
+      padding: 20px 5px;
+      float: left;
+      stroke: black;
+      width: 15%;
+      margin-left: 2%;
     }
     
-    /* Add padding to container elements */
     .container {
         text-align: center;
       padding: 16px;
     }
-    
-    /* Clear floats */
     .clearfix::after {
       content: "";
       clear: both;
@@ -111,7 +178,10 @@
         top: 6%;
     }
     
-    /* Change styles for cancel button and signup button on extra small screens */
+    .data2{
+      position: absolute;
+
+    }
     @media screen and (max-width: 300px) {
       .cancelbtn, .signupbtn {
          width: 40%;
