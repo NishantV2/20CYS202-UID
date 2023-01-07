@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="Amrita-vishwa-vidyapeetham-color-logo.png">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {
+    background-color: black;
+    box-sizing: border-box;
+  }
+
+a{
+    color: white;
+    text-decoration:none;
+}
+input[type=text], select, textarea {
+    color: white;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contact{
+    position: absolute;
+    right: 5%;
+    top:10%;
+    color: peru;
+}
+
+label{
+    color: white;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<Center>
+<h3 style="color: white;">Contact Us!</h3>
+</Center>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" onchange="nameValdie()" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" onchange="nameValdie()" placeholder="Your last name.." required>
+
+    <label for="country">Batch</label>
+    <select id="country" name="country">
+      <option value="australia">CSE</option>
+      <option value="canada">ECE</option>
+      <option value="usa">EEE</option>
+      <option value="australia">CYS</option>
+      <option value="canada">ELC</option>
+      <option value="usa">ARE</option>
+      <option value="australia">CHEM</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+    //     input = document.getElementById("file")
+    //     {
+    
+    //   if (input.files && input.files[0].type === 'application/pdf') {
+    //     console.log(input.files[0].type)
+    //     return true;
+    //   } else {
+    //     alert("NOT a PDF")
+    //     return false;
+    //   }
+    // }
+    
+    function nameValdie(){
+      me = document.getElementById("text").value
+      const regex = /^[a-zA-Z\s]+$/ 
+      if (!!me.match(regex) == false) {
+        alert("Not a valid Name")
+        return false
+      }
+      return true
+    }
+    
+    var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+if(password.value != confirm_password.value) {
+confirm_password.setCustomValidity("Passwords Don't Match");
+} else {
+confirm_password.setCustomValidity('');
+}
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+    
+  
+       
+    </script>
+
+</body>
+</html>
