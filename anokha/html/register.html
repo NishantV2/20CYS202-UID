@@ -1,7 +1,8 @@
 <html>
-    <head>
-        <title></title>
-    </head>
+  <head>
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="Amrita-vishwa-vidyapeetham-color-logo.png">
+</head>
 
     <body style="background-color:black;">
       <div class="data1">
@@ -12,6 +13,9 @@
         <form>
             <div class="container">
               <h1 style="color: white; font-size: 55px;" >Registration</h1>
+              <div class="contact">
+                <a href="contact.htm">Contact Us</a>
+            </div>
               <p style="color: white; font-size: 20px;">Please fill this form to take part in Anokha Tech Fest 2023</p>
                 <br><br>
               <label  class = "cei" style="color: white;" for="email"><b>College Email ID:</b></label><br><br>
@@ -33,7 +37,7 @@
               <label  for="javascript">Others</label>
               <br><br>
               <div class="clearfix">
-                <button type="button" class="cancelbtn" ><a href=index.htm style="text-decoration:none" style="color: black;" >Go Back</a></button>
+                <button type="button" class="cancelbtn" ><a href=../index.html style="text-decoration:none" style="color: black;" >Go Back</a></button>
                 <button type="submit" class="signupbtn">Sign Up</button>
               </div>
               
@@ -182,6 +186,12 @@ confirm_password.onkeyup = validatePassword;
       position: absolute;
 
     }
+    .contact{
+    position: absolute;
+    right: 5%;
+    top:10%;
+    color: peru;
+}
     @media screen and (max-width: 300px) {
       .cancelbtn, .signupbtn {
          width: 40%;
