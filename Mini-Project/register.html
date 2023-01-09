@@ -152,10 +152,15 @@ function ValidateEmail(inputText){
       <input type="email" id="mail" name="user_email">
       
   
-      
-      <input type="file" id="myFile" name="filename" class = ok>
-      
+      <label for="filename">Add Your Photo:</label>
+      <input type="file" id="myFile" name="filename" class = ok><br><br>
+      <label for="sus">Write Something About You:</label>
+      <textarea name="sus" id="sus" cols="30" rows="10"></textarea>
 
+      <div class="tacbox">
+        <input id="checkbox" type="checkbox" />
+        <label for="checkbox"> I agree to these <a href="tandc.htm">Terms and Conditions</a>.</label>
+      </div>
     </fieldset>
 
 
@@ -165,7 +170,7 @@ function ValidateEmail(inputText){
     
       
     </select>
-    <button type="submit" class = "submit" name= "submit" form="form1" value="Submit" onclick="ValidateEmail(document.form1.text1)">Submit</button>
+    <button type="submit" class = "submit" name= "submit" form="form1" value="Submit" onclick="ValidateEmail(document.form1.text1)">Sign Up</button>
     
   </fieldset>
 </body>
