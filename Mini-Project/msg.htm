@@ -138,6 +138,9 @@
 		</footer>
 
 	</main>
+	<div class= "down">
+		&copy; Copyright <strong><span>FriendFinder</span></strong>. All Rights Reserved
+		</div>
 </div>
 
 
@@ -159,7 +162,7 @@
     <textarea name="" id="" cols="30" rows="7"></textarea>
     
 
-    <button type="submit" class="btn" ><a href="msg2.htm">Report</a></button>
+    <a href="msg2.htm"><button type="submit" class="btn" >Report</button></a>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button><br><br>
   </form>
 </div>
@@ -181,8 +184,20 @@ function closeForm() {
 	box-sizing:border-box;
 }
 body{
-	background-color: peru;
+	background-color: black;
 	font-family:Arial;
+}
+.down{
+  background-color: peru;
+  position: absolute;
+  bottom: -140%;
+  left: 1%;
+  text-align: center;
+  color: black;
+  margin-top: 100px;
+  width: 100%;
+  padding: 100px 40%;
+  display: flex;
 }
 #container{
 	width:750px;
@@ -217,6 +232,12 @@ aside{
   cursor: pointer;
   opacity: 0.8;
 
+}
+#footer {
+  background: white;
+  padding: 0 0 30px 0;
+  color: black;
+  font-size: 14px;
 }
 
 /* The popup form - hidden by default */

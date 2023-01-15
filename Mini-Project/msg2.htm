@@ -95,6 +95,9 @@
             <a  class="open-button" onclick="openForm()">Report</a>
             </div>
 		</footer>
+		<div class= "down">
+			&copy; Copyright <strong><span>FriendFinder</span></strong>. All Rights Reserved
+			</div>
 
 	</main>
 </div>
@@ -140,7 +143,7 @@ function closeForm() {
 	box-sizing:border-box;
 }
 body{
-	background-color: peru;
+	background-color: black;
 	font-family:Arial;
 }
 #container{
@@ -204,6 +207,12 @@ aside{
   background: #f1f1f1;
 }
 
+#footer {
+  background: white;
+  padding: 0 0 30px 0;
+  color: black;
+  font-size: 14px;
+}
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
@@ -425,6 +434,18 @@ main footer textarea{
 }
 main footer textarea::placeholder{
 	color:#ddd;
+}
+.down{
+  background-color: peru;
+  position: absolute;
+  bottom: -140%;
+  left: 1%;
+  text-align: center;
+  color: black;
+  margin-top: 100px;
+  width: 100%;
+  padding: 100px 40%;
+  display: flex;
 }
 main footer img{
 	height:30px;
